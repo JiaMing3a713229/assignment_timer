@@ -1,0 +1,169 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/17/2019  20:26:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Objects\flash_led_timer.obj, .\Objects\Timer_LED.obj, .\Objects\Timer_Led1.obj TO .\Objects\t
+>> imer_practice PRINT (.\Listings\timer_practice.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\flash_led_timer.obj (FLASH_LED_TIMER)
+  .\Objects\Timer_LED.obj (TIMER_LED)
+  .\Objects\Timer_Led1.obj (TIMER_LED1)
+
+
+LINK MAP OF MODULE:  .\Objects\timer_practice (FLASH_LED_TIMER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     002FH     ABSOLUTE     
+* OVERLAP * CODE    0000H     0044H     ABSOLUTE     
+* OVERLAP * CODE    0000H     002FH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\timer_practice (FLASH_LED_TIMER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FLASH_LED_TIMER
+  C:0018H         SYMBOL        DELAY
+  C:0004H         SYMBOL        LEFT
+  C:002AH         SYMBOL        OK
+  D:0090H         SYMBOL        P1
+  C:000FH         SYMBOL        RIGHT
+  C:0000H         SYMBOL        START
+  B:0088H.5       SYMBOL        TF0
+  D:008CH         SYMBOL        TH0
+  C:001DH         SYMBOL        TIMER
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0025H         SYMBOL        WAIT
+  C:0000H         LINE#         2
+  C:0002H         LINE#         4
+  C:0004H         LINE#         5
+  C:0006H         LINE#         6
+  C:0008H         LINE#         7
+  C:0009H         LINE#         8
+  C:000BH         LINE#         9
+  C:000DH         LINE#         10
+  C:000FH         LINE#         11
+  C:0011H         LINE#         12
+  C:0013H         LINE#         13
+  C:0014H         LINE#         14
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/17/2019  20:26:42  PAGE 2
+
+
+  C:0016H         LINE#         16
+  C:0018H         LINE#         18
+  C:001AH         LINE#         19
+  C:001DH         LINE#         20
+  C:0020H         LINE#         21
+  C:0023H         LINE#         22
+  C:0025H         LINE#         23
+  C:0028H         LINE#         24
+  C:002AH         LINE#         25
+  C:002CH         LINE#         26
+  C:002EH         LINE#         27
+  -------         ENDMOD        FLASH_LED_TIMER
+
+  -------         MODULE        TIMER_LED
+  C:001AH         SYMBOL        CONT
+  B:00A8H.7       SYMBOL        EA
+  B:00A8H.1       SYMBOL        ET0
+  C:001BH         SYMBOL        MAIN
+  C:0043H         SYMBOL        OK
+  D:0090H         SYMBOL        P1
+  C:0033H         SYMBOL        PAUSE
+  C:0035H         SYMBOL        TABLE
+  D:008CH         SYMBOL        TH0
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0000H         LINE#         2
+  C:000BH         LINE#         5
+  C:000EH         LINE#         6
+  C:0011H         LINE#         7
+  C:0013H         LINE#         8
+  C:0015H         LINE#         9
+  C:0016H         LINE#         10
+  C:0017H         LINE#         11
+  C:0019H         LINE#         12
+  C:001AH         LINE#         17
+  C:001BH         LINE#         19
+  C:001DH         LINE#         20
+  C:0020H         LINE#         21
+  C:0022H         LINE#         24
+  C:0024H         LINE#         25
+  C:0027H         LINE#         27
+  C:002AH         LINE#         28
+  C:002DH         LINE#         29
+  C:002FH         LINE#         30
+  C:0031H         LINE#         31
+  C:0033H         LINE#         33
+  -------         ENDMOD        TIMER_LED
+
+  -------         MODULE        TIMER_LED1
+  C:0018H         SYMBOL        DELAY
+  C:0004H         SYMBOL        LEFT
+  C:002AH         SYMBOL        OK
+  D:0090H         SYMBOL        P1
+  C:000FH         SYMBOL        RIGHT
+  C:0000H         SYMBOL        START
+  B:0088H.5       SYMBOL        TF0
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/17/2019  20:26:42  PAGE 3
+
+
+  D:008CH         SYMBOL        TH0
+  C:001DH         SYMBOL        TIMER
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0025H         SYMBOL        WAIT
+  C:0000H         LINE#         2
+  C:0002H         LINE#         4
+  C:0004H         LINE#         5
+  C:0006H         LINE#         6
+  C:0008H         LINE#         7
+  C:0009H         LINE#         8
+  C:000BH         LINE#         9
+  C:000DH         LINE#         10
+  C:000FH         LINE#         11
+  C:0011H         LINE#         12
+  C:0013H         LINE#         13
+  C:0014H         LINE#         14
+  C:0016H         LINE#         16
+  C:0018H         LINE#         18
+  C:001AH         LINE#         19
+  C:001DH         LINE#         20
+  C:0020H         LINE#         21
+  C:0023H         LINE#         22
+  C:0025H         LINE#         23
+  C:0028H         LINE#         24
+  C:002AH         LINE#         25
+  C:002CH         LINE#         26
+  C:002EH         LINE#         27
+  -------         ENDMOD        TIMER_LED1
+
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      002EH
+
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0043H
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0099H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=162
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

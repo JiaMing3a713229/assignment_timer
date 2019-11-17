@@ -1,0 +1,65 @@
+A51 MACRO ASSEMBLER  FLASH_LED_TIMER                                                      11/17/2019 20:23:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\flash_led_timer.obj
+ASSEMBLER INVOKED BY: D:\keil\C51\BIN\A51.EXE ..\flash_led_timer.a51 SET(SMALL) DEBUG PRINT(.\Listings\flash_led_timer.l
+                      st) OBJECT(.\Objects\flash_led_timer.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7908              2             START:  MOV     R1,#08H
+                       3                             
+0002 7401              4             MOV     A,#00000001B
+0004 F590              5             LEFT:   MOV     P1,A
+0006 1118              6                             ACALL   DELAY
+0008 23                7                             RL      A
+0009 D9F9              8                             DJNZ    R1,LEFT
+000B 7908              9                             MOV     R1,#08H
+000D 7480             10                             MOV A,#10000000B
+000F F590             11             RIGHT:  MOV     P1,A
+0011 1118             12                             ACALL   DELAY
+0013 03               13                             RR      A
+0014 D9F9             14                             DJNZ    R1,RIGHT
+                      15                             
+0016 0100             16                             AJMP    START
+                      17                             
+0018 7C32             18             DELAY:  MOV     R4,#50
+001A 758901           19                             MOV     TMOD,#01H
+001D 758C3C           20             TIMER:  MOV     TH0,#3CH
+0020 758AB0           21                             MOV     TL0,#0B0H
+0023 D28C             22                             SETB    TR0
+0025 208D02           23             WAIT:   JB      TF0,OK
+0028 0125             24                             AJMP    WAIT
+002A C28D             25             OK:             CLR     TF0
+002C DCEF             26                             DJNZ    R4,TIMER
+002E 22               27                             RET
+                      28             END
+A51 MACRO ASSEMBLER  FLASH_LED_TIMER                                                      11/17/2019 20:23:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   0018H   A   
+LEFT . . . . . . .  C ADDR   0004H   A   
+OK . . . . . . . .  C ADDR   002AH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+RIGHT. . . . . . .  C ADDR   000FH   A   
+START. . . . . . .  C ADDR   0000H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TIMER. . . . . . .  C ADDR   001DH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+WAIT . . . . . . .  C ADDR   0025H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

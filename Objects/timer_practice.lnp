@@ -1,0 +1,5 @@
+".\Objects\flash_led_timer.obj",
+".\Objects\Timer_LED.obj",
+".\Objects\Timer_Led1.obj" 
+TO ".\Objects\timer_practice" 
+PRINT(".\Listings\timer_practice.m51")

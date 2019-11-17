@@ -1,0 +1,86 @@
+A51 MACRO ASSEMBLER  TIMER_LED                                                            11/17/2019 20:23:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Timer_LED.obj
+ASSEMBLER INVOKED BY: D:\keil\C51\BIN\A51.EXE ..\Timer_LED.a51 SET(SMALL) DEBUG PRINT(.\Listings\Timer_LED.lst) OBJECT(.
+                      \Objects\Timer_LED.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 000H
+0000 011B              2             AJMP MAIN
+                       3             
+000B                   4     ORG 000BH
+000B 853C8C            5             MOV     TH0,3CH
+000E 85B08A            6             MOV TL0,0B0H
+0011 DC07              7             DJNZ R4,CONT
+0013 7C64              8             MOV R4,#100
+0015 E9                9             MOV     A,R1
+0016 93               10             MOVC    A,@A+DPTR
+0017 F590             11             MOV             P1,A
+0019 09               12             INC             R1
+                      13             ;DJNZ   R0,LOOP
+                      14             ;AJMP   START
+                      15             
+                      16             
+001A 32               17             CONT:RETI
+                      18             
+001B 780F             19             MAIN:   MOV             R0,#OK-TABLE+1
+001D 900035           20                             MOV             DPTR,#TABLE
+0020 7900             21                             MOV             R1,#00H
+                      22                             
+                      23                             ;MOV    P1,A
+0022 7C64             24                             MOV     R4,#100
+0024 758901           25                             MOV     TMOD,#00000001B
+                      26                             
+0027 758C3C           27                             MOV     TH0,#3CH
+002A 758AB0           28                             MOV TL0,#0B0H
+002D D2AF             29                             SETB    EA
+002F D2A9             30                             SETB    ET0
+0031 D28C             31                             SETB    TR0
+                      32                             
+0033 0133             33                             PAUSE:AJMP      PAUSE
+                      34             
+0035 01               35             TABLE:  DB 00000001B
+0036 02               36                             DB 00000010B
+0037 04               37                             DB 00000100B
+0038 08               38                             DB 00001000B
+0039 10               39                             DB 00010000B
+003A 20               40                             DB 00100000B
+003B 40               41                             DB 01000000B
+003C 80               42                             DB 10000000B
+003D 40               43                             DB 01000000B
+003E 20               44                             DB 00100000B
+003F 10               45                             DB 00010000B
+0040 08               46                             DB 00001000B
+0041 04               47                             DB 00000100B
+0042 02               48                             DB 00000010B
+0043 01               49                     OK: DB 00000001B
+                      50     END
+A51 MACRO ASSEMBLER  TIMER_LED                                                            11/17/2019 20:23:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONT . . . . . . .  C ADDR   001AH   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+MAIN . . . . . . .  C ADDR   001BH   A   
+OK . . . . . . . .  C ADDR   0043H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+PAUSE. . . . . . .  C ADDR   0033H   A   
+TABLE. . . . . . .  C ADDR   0035H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
